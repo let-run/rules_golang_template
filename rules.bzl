@@ -61,7 +61,7 @@ _render = rule(
         "template": attr.label(
             doc="The template file to use as input to the template render",
             allow_files = True,
-            single_file = True,
+            allow_single_file = True,
             mandatory = True,
         ),
         "file_data_values": attr.label_keyed_string_dict(
@@ -89,7 +89,7 @@ _render = rule(
         "_render": attr.label(
             default = Label("//render:render"),
             allow_files = True,
-            single_file = True,
+            allow_single_file = True,
             executable = True,
             cfg = "host",
         ),
