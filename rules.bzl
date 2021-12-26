@@ -82,7 +82,7 @@ _render = rule(
             allow_empty=True, 
             default={}, 
             mandatory=True, 
-            non_empty=False
+            allow_empty=True
         ),
         # The label to the crd definition 'hybrises.modelt.hybris.com'
         "_render": attr.label(
