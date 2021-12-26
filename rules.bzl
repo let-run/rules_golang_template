@@ -81,8 +81,7 @@ _render = rule(
             doc="A map<string:string> of values to import into the template context",
             allow_empty=True, 
             default={}, 
-            mandatory=True, 
-            allow_empty=True
+            mandatory=True
         ),
         # The label to the crd definition 'hybrises.modelt.hybris.com'
         "_render": attr.label(
