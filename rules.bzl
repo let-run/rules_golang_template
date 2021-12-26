@@ -60,7 +60,6 @@ _render = rule(
         ),
         "template": attr.label(
             doc="The template file to use as input to the template render",
-            allow_files = True,
             allow_single_file = True,
             mandatory = True,
         ),
@@ -88,7 +87,6 @@ _render = rule(
         # The label to the crd definition 'hybrises.modelt.hybris.com'
         "_render": attr.label(
             default = Label("//render:render"),
-            allow_files = True,
             allow_single_file = True,
             executable = True,
             cfg = "host",
