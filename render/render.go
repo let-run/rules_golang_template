@@ -196,7 +196,7 @@ func Render(templateFilename string,
 	}
 	templateStr := string(templateBytes)
 
-	tmpl, err := template.New("test").Parse(templateStr)
+	tmpl, err := template.New("test").Delims("[[", "]]").Parse(templateStr)
 
 	stringOut := bytes.NewBufferString(output)
 	tmpl.Execute(stringOut, templateData)
